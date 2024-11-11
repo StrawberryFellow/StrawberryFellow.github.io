@@ -14,6 +14,7 @@ body {
 
 /* Header Styles */
 header {
+    position: relative; /* Ensure child elements position correctly */
     background: url('dublincity1.jpg') no-repeat center center/cover; /* Added background image */
     padding: 40px 20px;
     color: #fff;
@@ -28,7 +29,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    background: rgba(0, 0, 0, 0.3); /* Adjusted overlay color (0.3 opacity for balance) */
     z-index: 0;
 }
 
