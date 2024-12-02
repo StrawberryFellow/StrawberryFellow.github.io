@@ -67,7 +67,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
-    transition: transform 0.3s ease; /* Retaining transform for hover effect */
+    transition: transform 0.3s ease; /* Uses the transform tool for the hover effect*/
 }
 
 .featured-events:hover,
