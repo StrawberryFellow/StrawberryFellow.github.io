@@ -41,9 +41,7 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #8b5cf6;
-}
+
 
 /* Main content styles */
 main {
