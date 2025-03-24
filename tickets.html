@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - Animerverse Con</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "confetti-js": "https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Animerverse Con</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="guests.html">Guests</a>
+            <a href="tickets.html">Tickets</a>  
+            <a href="location.html">Location</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <section id="tickets">
+        <h2>Tickets</h2>
+        <p>Get your tickets to Animerverse Con before they sell out!</p>
+        <div class="ticket-options">
+            <div class="ticket-card">
+                <h3>Weekend Pass</h3>
+                <p>Full access to all events for Friday, Saturday and Sunday.</p>
+                <p>$80</p>
+                <button id="buy-weekend">Buy Now</button>
+            </div>
+            <div class="ticket-card">
+                <h3>Day Pass</h3>
+                <p>Access to events for one day of your choice.</p>
+                <p>$40</p>
+                <button id="buy-day">Buy Now</button>
+            </div>
+            <div class="ticket-card">
+                <h3>VIP Pass</h3>
+                <p>Priority seating, exclusive events, and special meet-and-greets.</p>
+                <p>$150</p>
+                <button id="buy-vip">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="ticket-info">
+            <h3>Important Information</h3>
+            <ul>
+                <li>Children under 10 years old get in free with a paying adult</li>
+                <li>All tickets include access to the exhibit hall and artist alley</li>
+                <li>VIP passes include a convention t-shirt and exclusive merchandise</li>
+                <li>Tickets will be available at the door for an additional $10 fee</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="confetti-canvas"></div>
+    <footer>
+        <p>&copy; 2024 Animerverse Con</p>
+    </footer>
+</body>
+</html>

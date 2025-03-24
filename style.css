@@ -1,0 +1,337 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: #bb86fc;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+nav a:hover {
+    color: #03dac6;
+    text-decoration: underline;
+}
+
+#hero {
+    background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    display: inline-block;
+}
+
+.cta-button {
+    background-color: #bb86fc;
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #03dac6;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+}
+
+.guest-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.guest-card {
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: #2d2d2d;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.ticket-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ticket-card {
+    border: 1px solid #444;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+button {
+    background-color: #bb86fc;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #03dac6;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #555;
+    padding: 0 0.1rem;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #bb86fc;
+}
+
+.promo-video {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+#guests-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.guests-hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+#guest-list {
+    padding: 0 2rem;
+}
+
+.guest-card {
+    display: flex;
+    margin-bottom: 3rem;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guest-card img {
+    width: 25%;
+    object-fit: cover;
+}
+
+.guest-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.guest-title {
+    color: #bb86fc;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.guest-roles {
+    font-weight: bold;
+}
+
+.guest-schedule {
+    margin-top: 1rem;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.guest-schedule h4 {
+    margin-top: 0;
+    color: #03dac6;
+}
+
+.featured {
+    border: 2px solid #bb86fc;
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.industry-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.industry-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.industry-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.industry-card p {
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+    .guest-card {
+        flex-direction: column;
+    }
+    
+    .guest-card img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .gallery-item {
+        width: 100%;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}

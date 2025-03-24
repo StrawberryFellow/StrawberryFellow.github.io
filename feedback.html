@@ -3,38 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Doran's Dublin Events - Events</title>
+    <title>Feedback - Animerverse Con</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="feedback.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "confetti-js": "https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Doran Dublin Events</h1>
+        <h1>Animerverse Con</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="past-events.html">Past Events</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="feedback.html">Feedback Form</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="guests.html">Guests</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="location.html">Location</a>
+            <a href="feedback.html">Feedback</a>
         </nav>
     </header>
-    <title>Feedback Form</title>
-</head>
-<!-- The below code forms the table and labels required for the user feedback form-->
-<body>
-    <h1>Feedback Form</h1>
-    <form action="/submit-feedback" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <section id="feedback">
+        <h2>Share Your Feedback</h2>
+        <p>We value your opinion! Please let us know about your experience with Animerverse Con.</p>
+        
+        <div class="feedback-form">
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="attended">Have you attended Animerverse Con before?</label>
+                    <select id="attended" name="attended">
+                        <option value="first">This is my first time</option>
+                        <option value="second">This is my second time</option>
+                        <option value="multiple">I've attended multiple times</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>How would you rate your experience?</label>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="favorite">What was your favorite part of the convention?</label>
+                    <textarea id="favorite" name="favorite"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="improvements">What improvements would you suggest?</label>
+                    <textarea id="improvements" name="improvements"></textarea>
+                </div>
+                
+                <button type="submit" id="submitButton">Submit Feedback</button>
+            </form>
+            
+            <div id="thankYouMessage" style="display: none; margin-top: 2rem; text-align: center;">
+                <h3>Thank you for your feedback!</h3>
+                <p>We appreciate your input and will use it to make Animerverse Con even better next year.</p>
+                <div id="confetti-canvas-feedback"></div>
+            </div>
+        </div>
+    </section>
 
-        <label for="feedback">Feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+    <footer>
+        <p>&copy; 2024 Animerverse Con</p>
+    </footer>
 </body>
 </html>
