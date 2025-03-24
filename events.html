@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>AnimeVerse Con - Events</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eventItems = document.querySelectorAll(".event-item h3");
+            
+            eventItems.forEach(event => {
+                event.addEventListener("click", function () {
+                    const details = this.nextElementSibling;
+                    details.style.display = details.style.display === "none" ? "block" : "none";
+                });
+            });
+
+            const eventDivs = document.querySelectorAll(".event-item");
+            eventDivs.forEach(div => {
+                div.addEventListener("mouseover", function () {
+                    this.style.backgroundColor = "#f0f0f0";
+                });
+                div.addEventListener("mouseout", function () {
+                    this.style.backgroundColor = "";
+                });
+            });
+        });
+        
+        function showReminder() {
+            alert("Don't forget to attend your favorite events at AnimeVerse Con!");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -22,32 +48,21 @@
 
     <main>
         <h2>Convention Schedule</h2>
+        <button onclick="showReminder()">Get Event Reminder</button>
         <div class="schedule">
             <div class="event-item">
                 <h3>Opening Ceremony</h3>
-                <p>Join us for the grand opening of AnimeVerse Con 2025!</p>
-                <div class="event-details">
-                    <span>10:00 AM - 11:00 AM</span>
-                    <span>Main Hall</span>
-                </div>
+                <p class="event-details" style="display: none;">Join us for the grand opening of AnimeVerse Con 2025!<br>10:00 AM - 11:00 AM | Main Hall</p>
             </div>
 
             <div class="event-item">
                 <h3>Cosplay Contest</h3>
-                <p>Watch amazing cosplayers compete for the grand prize</p>
-                <div class="event-details">
-                    <span>2:00 PM - 4:00 PM</span>
-                    <span>Stage A</span>
-                </div>
+                <p class="event-details" style="display: none;">Watch amazing cosplayers compete for the grand prize.<br>2:00 PM - 4:00 PM | Stage A</p>
             </div>
 
             <div class="event-item">
                 <h3>Anime Movie Screening</h3>
-                <p>Special premiere of the latest anime releases</p>
-                <div class="event-details">
-                    <span>5:00 PM - 7:00 PM</span>
-                    <span>Theater Room</span>
-                </div>
+                <p class="event-details" style="display: none;">Special premiere of the latest anime releases.<br>5:00 PM - 7:00 PM | Theater Room</p>
             </div>
         </div>
     </main>

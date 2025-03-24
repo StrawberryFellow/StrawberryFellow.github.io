@@ -132,18 +132,7 @@ h2 {
     display: block;
 }
 
-/* Overlay styles */
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 2; /* Ensure overlay is above the image but below the iframe */
-}
+
 
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
